@@ -3,15 +3,15 @@
 https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/
 
 ## Target
- * [v] Basic Connection
- * [v] Properties Configuration
- * [v] GET/POST/PUT/PATCH/DELETE request
- * [v] Request Parameter/Request Body/Request Path
- * [v] Response body(Json/XML)
- * [v] DI
- * [v] Multipart request
+ * [x] Basic Connection
+ * [x] Properties Configuration
+ * [x] GET/POST/PUT/PATCH/DELETE request
+ * [x] Request Parameter/Request Body/Request Path
+ * [x] Response body(Json/XML)
+ * [x] DI
+ * [x] Multipart request
  * [ ] middleware, filter(Auth, Limitation, Cors, Encoding, unless/only list, etc...)
  * [ ] Error Handler
- * [v] Database Connection
- * [ ] NoSQL Database Connection
+ * [x] Database Connection(MySQL)
+ * [ ] NoSQL Database Connection(Redis)
  * [ ] External Call
