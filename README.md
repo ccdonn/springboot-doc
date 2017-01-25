@@ -13,5 +13,6 @@ https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/
  * [ ] middleware, filter(Auth, Limitation, Cors, Encoding, unless/only list, etc...)
  * [ ] Error Handler
  * [x] Database Connection(MySQL)
+ * [x] Database Transaction
  * [ ] NoSQL Database Connection(Redis)
  * [ ] External Call
