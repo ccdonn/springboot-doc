@@ -10,9 +10,11 @@ https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/
  * [x] Response body(Json/XML)
  * [x] DI
  * [x] Multipart request
- * [ ] middleware, filter(Auth, Limitation, Cors, Encoding, unless/only list, etc...)
+ * [x] middleware, filter(Auth, Limitation, Cors, Encoding, unless/only list, etc...)
  * [ ] Error Handler
  * [x] Database Connection(MySQL)
  * [x] Database Transaction
- * [ ] NoSQL Database Connection(Redis)
+ * [x] NoSQL Database Connection(Redis)
  * [ ] External Call
+ * [x] Logging
+ * [ ] logging with Http request/response detail

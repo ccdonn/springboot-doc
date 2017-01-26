@@ -11,10 +11,14 @@ import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
 @Component
 public class Sample2Filter implements Filter {
+
+	private static Logger logger = LoggerFactory.getLogger(Sample2Filter.class);
 
 	@Override
 	public void init(FilterConfig filterConfig) throws ServletException {
@@ -27,7 +31,7 @@ public class Sample2Filter implements Filter {
 		HttpServletRequest httpRequest = (HttpServletRequest) request;
 		String token = httpRequest.getHeader("token");
 		
-		System.out.println("token:"+token);
+		logger.info("token:"+token);
 		
 		HttpServletResponse httpResponse = (HttpServletResponse) response;
 		httpResponse.setHeader("X-xMessage", "Donn-Was-Here");
