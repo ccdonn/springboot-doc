@@ -8,6 +8,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import donn.springboot_doc.entity.Person;
 import donn.springboot_doc.repository.PersonRepository;
+import donn.springboot_doc.repository.redis.SampleRedisRepository;
 
 @Service
 @Transactional
@@ -40,5 +41,17 @@ public class SampleService {
 			throw new Exception();
 		}
 	}
+
+	@Autowired
+	SampleRedisRepository sampleRedisRepository;
+
+	public String getRedis() {
+		return sampleRedisRepository.getSample();
+	}
+
+	public void postRedis() {
+		sampleRedisRepository.saveSample("mySampleKey");
+	}
+	
 
 }

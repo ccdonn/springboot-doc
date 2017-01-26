@@ -19,6 +19,9 @@ import donn.springboot_doc.service.SampleService;
 @RestController
 public class SampleController {
 	
+	/**
+	 * Env inject by autowired
+	 */
 	@Autowired
 	MyConfigValue myConfig;
 	
@@ -90,5 +93,16 @@ public class SampleController {
 	public Person savePerson() throws Exception {
 //		throw new Exception();
 		return sampleService.savePerson(new Person("donn"));
+	}
+	
+	@RequestMapping(value="/redis", method=RequestMethod.GET)
+	public String getRedis() {
+		return sampleService.getRedis();
+	}
+	
+	@RequestMapping(value="/redis", method=RequestMethod.POST)
+	public String postRedis() {
+		sampleService.postRedis();
+		return "ok";
 	}
 }
