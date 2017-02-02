@@ -13,7 +13,7 @@ import donn.springboot_doc.repository.redis.SampleRedisRepository;
 @Service
 @Transactional
 public class SampleService {
-
+	
 	public String call() {
 		return "sample2-service";
 	}
@@ -25,6 +25,12 @@ public class SampleService {
 	public Iterable<Person> getPerson() {
 		return personRepository.findAll();	
 	}
+	
+	@Transactional(propagation=Propagation.NOT_SUPPORTED)
+	public Person get1Person(long id) {
+		return personRepository.findOne(id);	
+	}
+	
 	
 	@Transactional(rollbackFor=Exception.class)
 	public Person savePerson(Person person) throws Exception {

@@ -14,10 +14,19 @@ import donn.springboot_doc.config.MyConfigValue;
 import donn.springboot_doc.entity.Person;
 import donn.springboot_doc.request.SampleRequest;
 import donn.springboot_doc.response.SampleResponse;
+import donn.springboot_doc.service.SampleExternalService;
 import donn.springboot_doc.service.SampleService;
 
 @RestController
 public class SampleController {
+	
+	@Autowired
+	SampleExternalService sampleExternalService;
+
+	@RequestMapping("/external")
+	public String external() {
+		return sampleExternalService.call();
+	}
 	
 	/**
 	 * Env inject by autowired
@@ -87,6 +96,11 @@ public class SampleController {
 	@RequestMapping(value="/db")
 	public Iterable<Person> getPerson() {
 		return sampleService.getPerson();
+	}
+	
+	@RequestMapping(value="/db1")
+	public Person get1Person() {
+		return sampleService.get1Person(7);
 	}
 	
 	@RequestMapping(value="/db", method=RequestMethod.POST)
